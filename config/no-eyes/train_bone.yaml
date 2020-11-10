@@ -1,26 +1,26 @@
 
-work_dir: ./work_dir/no-conf/bone
+work_dir: ./work_dir/no-eyes/bone
 
 # feeder
 feeder: feeders.feeder.Feeder
 train_feeder_args:
-  data_path: ./data/no-conf/train_data_bone.npy
-  label_path: ./data/no-conf/train_label.pkl
+  data_path: ./data/no-eyes/train_data_bone.npy
+  label_path: ./data/no-eyes/train_label.pkl
   debug: False
 
 test_feeder_args:
-  data_path: ./data/no-conf/val_data_bone.npy
-  label_path: ./data/no-conf/val_label.pkl
+  data_path: ./data/no-eyes/val_data_bone.npy
+  label_path: ./data/no-eyes/val_label.pkl
 
 # model
 model: model.msg3d.Model
 model_args:
   num_class: 400
-  num_point: 18
+  num_point: 16
   num_person: 2
   num_gcn_scales: 8
   num_g3d_scales: 8
-  graph: graph.kinetics.AdjMatrixGraph
+  graph: graph.no_eyes.AdjMatrixGraph
 
 # optim
 weight_decay: 0.0005
