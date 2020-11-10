@@ -1,10 +1,17 @@
 import os
 import numpy as np
 
-# shape = (N, 3, T, V, M))
-sample_arr = np.zeros((1, 2, 300, 19, 1))
 
 files = os.listdir("./coordinates")
+
+# shape = (N, DIM, T, V, M))
+N = len(files)
+DIM = 2  # Dimensions of coordinates
+T = 300  # How long the samples should be
+V = 19  # Features
+M = 1  # Number of people
+sample_arr = np.zeros((N, DIM, T, V, M))
+
 for i, file_name in enumerate(files):
     with open(file_name) as csv_file:
         header = csv_file.readline().split(",")
@@ -35,3 +42,5 @@ for i, file_name in enumerate(files):
 
         sample_arr[i, 0, :, :, :] = x_arr
         sample_arr[i, 1, :, :, :] = y_arr
+
+print(sample_arr)
