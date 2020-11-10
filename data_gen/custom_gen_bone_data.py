@@ -28,8 +28,6 @@ parts = { 'train', 'val' }
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Bone data generation for NTU60/NTU120/Kinetics')
     parser.add_argument('-d', '--dataset', choices=['kinetics','no-eyes', 'no-conf', 'no-eyes-no-conf'], required=True)
-    parser.add_argument("-j", "--joints", help="1 removes joints, 0 keeps joints", required=True)
-    parser.add_argument("-c", "--confidence", help="1 removes eyes, 0 keeps eyes", required=True)
     args = parser.parse_args()
     benchmark = args.dataset
 
