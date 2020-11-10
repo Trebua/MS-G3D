@@ -87,6 +87,7 @@ def create_joint_data(remove_joint=True, remove_conf=True):
             print('Removing confidence')
             data = remove_confidence(data)
             print('Confidence removed')
+        print('Saving array')
         new_file_path = os.path.join(folder_path, filename)
         np.save(new_file_path, data)
         print(f'{new_file_path} saved')
