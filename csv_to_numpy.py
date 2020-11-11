@@ -1,5 +1,6 @@
 import os
 import numpy as np
+from extract_labels import get_label_info
 
 # Script to convert the CIMA csv files into the appropriate npy and json format to use the gen_data from MS-G3D
 # The label files looks like: (["file_names"], ["values"])
