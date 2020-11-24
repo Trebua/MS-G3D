@@ -20,6 +20,7 @@ model_args:
   num_gcn_scales: 8
   num_g3d_scales: 8
   graph: graph.no_eyes.AdjMatrixGraph
+  in_channels: 2
 
 # optim
 weight_decay: 0.0005
